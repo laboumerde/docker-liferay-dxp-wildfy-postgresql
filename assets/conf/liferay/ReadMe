@@ -1,0 +1,1 @@
+The portal-ext.properties files can be customized.
