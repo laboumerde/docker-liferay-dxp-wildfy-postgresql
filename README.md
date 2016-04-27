@@ -1,4 +1,4 @@
-## Docker image for Liferay v6.x bundeled with wildfly and PostgreSQL 9.3
+## Docker image for Liferay v7.x bundeled with wildfly and PostgreSQL 9.3
 
 The project will build a docker image with up and running Liferay 7.x distribution. The image include :
 
