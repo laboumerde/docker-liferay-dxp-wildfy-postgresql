@@ -68,7 +68,7 @@ Open **http://localhost:58080** in the browser of your choice and finish portal 
 
 * You can connect via ssh :
 
-    ssh root@localhost -p 5002258787
+    ssh root@localhost -p 50022
 
 * To restart the wildfly server (by killing the process, the supervisor will restart it... Yeah... might be enhanced)
 
