@@ -27,7 +27,7 @@ Added to those packages, you may need to create a "/opt/liferay/docker" folder t
 From project root folder :
 
     docker build -t liferay-7-x-x .
-    JOB=$(docker run -d -v /opt/liferay/docker:/opt/liferay/deploy -p 50022:22 -p 55432:5432 -p 58080:8080 -p 58787:8787 --name liferay-7-x-x liferay-7-x-x)
+    JOB=$(docker run -d -v /opt/liferay/docker:/opt/liferay/deploy -p 50022:22 -p 55432:5432 -p 58080:8080 -p 58787:8787 -p 51234:1234 --name liferay-7-x-x liferay-7-x-x)
     docker start $JOB
 
 Note :
@@ -38,6 +38,7 @@ Note :
         port 5432 is mapped to 55432 (postgresql)
         port 8080 is mapped to 58080 (wildfly)
         port 8787 is mapped to 58787 (wildfly debug port)
+        port 1234 is mapped to 51234 (jrebel remote port)   
 
 ## Accounts :
 
@@ -85,3 +86,5 @@ Open **http://localhost:58080** in the browser of your choice and finish portal 
             <liferay.auto.deploy.dir>/opt/liferay/docker/deploy</liferay.auto.deploy.dir>
         </properties>
     </profile>
+
+* don't forget to put jrebel jar in the conf/liferay/wildfly/jrebel folder :) It is referenced in the standalone.conf file.

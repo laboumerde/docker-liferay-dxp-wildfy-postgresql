@@ -36,6 +36,7 @@ EXPOSE 22
 EXPOSE 5432
 EXPOSE 8080
 EXPOSE 8787
+EXPOSE 1234
 
 # supervisor installation &&
 # create directory for child images to store configuration in
