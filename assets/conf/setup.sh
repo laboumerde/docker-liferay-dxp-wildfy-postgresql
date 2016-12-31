@@ -10,14 +10,12 @@ apt-get install -y vim nano emacs
 apt-get install -y openssh-server &&
 mkdir /var/run/sshd &&
 echo 'root:admin' | chpasswd &&
-sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config &&
-sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd &&
+sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config &&
+sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config &&
 echo "export VISIBLE=now" >> /etc/profile &&
 
 # Install PostgreSQL
-apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8 &&
-echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/sources.list.d/pgdg.list &&
-apt-get install -y python-software-properties software-properties-common postgresql-9.3 postgresql-client-9.3 postgresql-contrib-9.3 &&
+apt-get install -y python-software-properties software-properties-common postgresql-9.5 postgresql-client-9.5 postgresql-contrib-9.5 &&
 
 # Install JDK from /assets/packages/
 tar -zxvf /assets/packages/jdk* -C /opt/ &&
