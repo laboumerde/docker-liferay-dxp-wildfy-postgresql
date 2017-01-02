@@ -87,4 +87,6 @@ Open **http://localhost:58080** in the browser of your choice and finish portal 
         </properties>
     </profile>
 
-* don't forget to put jrebel jar in the conf/liferay/wildfly/jrebel folder :) It is referenced in the standalone.conf file.
+* Note : this version is for jrebel 7.
+
+* don't forget to put jrebel "so" file in the conf/liferay/wildfly/jrebel folder :) It is referenced in the standalone.conf file.
