@@ -15,7 +15,7 @@ sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config &&
 echo "export VISIBLE=now" >> /etc/profile &&
 
 # Install PostgreSQL
-apt-get install -y python-software-properties software-properties-common postgresql-9.5 postgresql-client-9.5 postgresql-contrib-9.5 &&
+apt-get install -y postgresql postgresql-client postgresql-contrib &&
 
 # Install JDK from /assets/packages/
 tar -zxvf /assets/packages/jdk* -C /opt/ &&

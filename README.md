@@ -1,8 +1,8 @@
-## Docker image for Liferay v7.x bundeled with wildfly and PostgreSQL 9.5
+## Docker image for Liferay v7.x bundeled with wildfly and PostgreSQL 10
 
 The project will build a docker image with up and running Liferay 7.x distribution. The image include :
 
-* PostgreSQL 9.5 database
+* PostgreSQL 10 database
 
 * JDK installation from provided tar.gz  
 
